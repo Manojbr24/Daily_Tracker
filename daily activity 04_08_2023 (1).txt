@@ -1,0 +1,166 @@
+﻿1,Face book API :
+ 
+Graph API: The Graph API is one of the primary APIs offered by Facebook, and it allows developers to access and interact with data on Facebook's social graph. This includes retrieving information about users, their posts, photos, friends, pages, groups, events, and more. The Graph API supports both reading and writing data, enabling developers to create, retrieve, update, and delete objects on Facebook.
+
+
+End point and Parameter:
+
+
+Endpoint: /{page-id}
+Parameters: fields (Allows retrieving details about a specific Facebook Page.)
+Page's Posts Endpoint:
+
+
+Endpoint: /{page-id}/posts
+Parameters: fields, since, until, limit, offset, and more. (Allows retrieving posts made by a specific Facebook Page.
+
+
+Business utilities:
+Messenger Integration: The Messenger Platform API, which is part of the Graph API, enables businesses to integrate Facebook Messenger into their customer support systems, marketing campaigns, and chatbots. This can enhance customer service and provide a convenient channel for communication.
+
+
+Instagram Integration: With the Instagram Graph API, businesses can access public data from Instagram, such as posts, media, hashtags, and more. This can be valuable for monitoring brand mentions, user-generated content, and tracking trends on Instagram.
+
+
+1.Linkedin API:
+
+
+LinkedIn offers the LinkedIn API (Application Programming Interface) to developers, providing access to various LinkedIn platform functionalities and data. The LinkedIn API allows developers to build applications, integrate LinkedIn features into their websites, and access certain user data (with user consent) programmatically.
+
+
+End points and parameter:
+
+
+Connections API:
+
+
+Endpoint: https://api.linkedin.com/v2/me/connections
+Parameters: fields, start, and count (Allows retrieving the authenticated user's connections.)
+
+
+Company API:
+
+
+Endpoint: https://api.linkedin.com/v2/companies/{company_id}
+Parameters: fields (Allows retrieving information about a specific company.)
+
+
+Business utilities:
+Company Branding and Presence: Companies can create a LinkedIn Company Page to showcase their brand, products, services, and company culture. This page acts as a professional online presence and helps build credibility and trust among customers and partners.
+
+
+Content Marketing: LinkedIn provides a platform for businesses to share thought leadership content, industry insights, and updates about their products and services. Businesses can publish articles, posts, and videos to reach a broader professional audience.
+
+
+
+
+2.---> completed
+3.----> completed
+4.----> completed
+5.----> completed
+
+
+
+
+6.What is an endpoint:
+The use of endpoints in message queues and pub/sub systems allows for decoupling between producers and consumers. Producers don't need to know who the consumers are, and vice versa. This decoupling enables better scalability, fault tolerance, and flexibility in building distributed systems, as each component can work independently and asynchronously through their designated endpoints.
+
+
+7. What is High Availability Architecture? what happens in High Availability Architecture:
+
+
+High Availability Architecture is an approach to designing and implementing systems that ensure continuous and reliable operation, even in the face of hardware failures, software issues, or other disruptions. The primary objective of HA architecture is to minimize downtime and provide uninterrupted access to critical services for users or customers.
+
+
+In High Availability Architecture, redundancy and fault tolerance are key principles. The system is designed with multiple instances of critical components, such as servers, databases, network devices, and storage, distributed across different physical locations or data centers. If one instance fails, the redundant components take over automatically to maintain service availability
+
+
+
+
+
+
+8.a
+
+
+
+
+const readline = require('readline');
+
+
+const rl = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout
+});
+
+
+function add(a, b) {
+  return a + b;
+}
+
+
+function subtract(a, b) {
+  return a - b;
+}
+
+
+function multiply(a, b) {
+  return a * b;
+}
+
+
+function divide(a, b) {
+  if (b === 0) {
+    throw new Error('Division by zero is not allowed.');
+  }
+  return a / b;
+}
+
+
+function calculator() {
+  rl.question('Enter the first number: ', (num1) => {
+    rl.question('Enter the second number: ', (num2) => {
+      rl.question('Enter the operation (+, -, *, /): ', (operator) => {
+        num1 = parseFloat(num1);
+        num2 = parseFloat(num2);
+        
+        let result;
+        switch (operator) {
+          case '+':
+            result = add(num1, num2);
+            break;
+          case '-':
+            result = subtract(num1, num2);
+            break;
+          case '*':
+            result = multiply(num1, num2);
+            break;
+          case '/':
+            result = divide(num1, num2);
+            break;
+          default:
+            console.log('Invalid operator.');
+            rl.close();
+            return;
+        }
+
+
+        console.log(`Result: ${result}`);
+        rl.close();
+      });
+    });
+  });
+}
+
+
+
+
+
+
+
+
+8.b XML code —-->      completed 
+
+
+
+
+9. ----> completed
