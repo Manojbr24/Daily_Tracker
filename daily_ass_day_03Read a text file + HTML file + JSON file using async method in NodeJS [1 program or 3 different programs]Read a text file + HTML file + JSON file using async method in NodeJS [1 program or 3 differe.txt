@@ -1,0 +1,109 @@
+﻿1.Read a text file + HTML file + JSON file using async method in NodeJS [1 program or 3 different programs]
+
+
+Text file:
+
+
+const fs = require('fs');
+
+
+function readTextFile(filename) {
+  return new Promise((resolve, reject) => {
+    fs.readFile(filename, 'utf8', (err, data) => {
+      if (err) {
+        reject(err);
+      } else {
+        resolve(data);
+      }
+    });
+  });
+}
+
+
+// Usage:
+readTextFile('example.txt')
+  .then((data) => {
+    console.log('Text File Content:');
+    console.log(data);
+  })
+  .catch((err) => {
+    console.error('Error reading text file:', err);
+  });
+
+
+HTML File:
+
+
+const fs = require('fs');
+
+
+function readHTMLFile(filename) {
+  return new Promise((resolve, reject) => {
+    fs.readFile(filename, 'utf8', (err, data) => {
+      if (err) {
+        reject(err);
+      } else {
+        resolve(data);
+      }
+    });
+  });
+}
+
+
+// Usage:
+readHTMLFile('example.html')
+  .then((htmlContent) => {
+    console.log('HTML File Content:');
+    console.log(htmlContent);
+  })
+  .catch((err) => {
+    console.error('Error reading HTML file:', err);
+  });
+
+
+JSON File:
+
+
+// JSON files can be read and parsed directly using the `require` function in Node.js.
+// However, we can still use Promises to make it consistent with other file reads.
+
+
+function readJSONFile(filename) {
+  return new Promise((resolve, reject) => {
+    fs.readFile(filename, 'utf8', (err, data) => {
+      if (err) {
+        reject(err);
+      } else {
+        try {
+          const jsonData = JSON.parse(data);
+          resolve(jsonData);
+        } catch (parseErr) {
+          reject(parseErr);
+        }
+      }
+    });
+  });
+}
+
+
+// Usage:
+readJSONFile('example.json')
+  .then((jsonData) => {
+    console.log('JSON File Content:');
+    console.log(jsonData);
+  })
+  .catch((err) => {
+    console.error('Error reading or parsing JSON file:', err);
+  });
+
+
+2. Practice with different use cases : 
+
+
+- Try Me : Pub-Sub scenario 
+- Get the hands cleared on Solace CLI Access
+
+
+
+
+: Completed
